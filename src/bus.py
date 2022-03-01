@@ -13,5 +13,8 @@ class Bus:
         self.passengers.remove(person)
     def empty(self):
         self.passengers = []
-    
+    def pick_up_from_stop(self, bus_stop):
+        for person in range(len(bus_stop.queue)):
+            self.pick_up(person)
+        bus_stop.clear
 
